@@ -43,7 +43,7 @@ namespace usefulCS
                 
                 Console.Write("{0, -10}", IsCorrectFooAndNoTrash(s));
                 Console.Write("{0, -10}", IsCorrectOperationSigns(s));
-                Console.Write("{0, -10}", IsCorrectParenthesis(s));
+                Console.Write("{0, -10}", IsCorrectParentheses(s));
 
                 Console.WriteLine("{0, -10}", StrIsMathExpr(s));
             }
@@ -143,7 +143,7 @@ namespace usefulCS
             }
             return true;
         }
-        static internal bool IsCorrectParenthesis(string s)
+        static internal bool IsCorrectParentheses(string s)
         {
             Stack<char> st = new Stack<char>();
 
@@ -181,7 +181,7 @@ namespace usefulCS
         //-----------------------------------------------------------------------------
         static internal bool StrIsMathExpr(string s)
         {
-            return (IsCorrectFooAndNoTrash(s) && IsCorrectOperationSigns(s) && IsCorrectParenthesis(s));
+            return (IsCorrectFooAndNoTrash(s) && IsCorrectOperationSigns(s) && IsCorrectParentheses(s));
         }
         //-----------------------------------------------------------------------------
     }//s

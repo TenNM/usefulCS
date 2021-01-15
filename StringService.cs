@@ -1,9 +1,9 @@
 ﻿namespace sandboxCS
 {
-    internal abstract class Service
+    internal abstract class StringService
     {
         //----------------------------------------------------------------------
-        internal static bool stringIsNumber(string s)
+        internal static bool StringIsNumber(string s)
         {
             bool weHaveOneComma = false;
             if (s[0].Equals(',')) { weHaveOneComma = true; }
@@ -21,8 +21,7 @@
 
             return true;
         }
-
-        internal static string dotsToCommas(string withCommasStr)
+        internal static string DotsToCommas(string withCommasStr)
         {
             string tempStr = "";
             foreach (char c in withCommasStr)
@@ -31,6 +30,12 @@
                 else tempStr += c;
             }
             return tempStr;
+        }
+        internal static string Reverse(string s)
+        {
+            string sRever = "";
+            foreach (char c in s) { sRever = c + sRever; }
+            return sRever;
         }
         //------------------------------------------------------------------------------end
     }

@@ -1,5 +1,5 @@
 # usefulCS
-Repo with some useful classes for C#
+Repo with some useful classes and structures for C#
 ### Features:
 ##### Class [FileIOSerializer.cs](https://github.com/TenNM/usefulCS/blob/master/FileIOSerializer.cs)
 1. Save and load obj with bin serialization.

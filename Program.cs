@@ -12,12 +12,7 @@ namespace usefulCS
     {      
         static void Main(string[] args)
         {
-            //MathExpressionValidator.TestIt();
-            //Console.WriteLine(StringService.Reverse("1234"));
-            string s = "dada";
-            s = s.Replace("da", "net");
-            Console.WriteLine(s);
-
+            Console.WriteLine(MaTen.EulerPhi(7));
             Console.ReadKey();
         }//m
     }//c

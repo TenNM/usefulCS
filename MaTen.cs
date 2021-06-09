@@ -1,4 +1,6 @@
-﻿namespace usefulCS
+﻿using System;
+
+namespace usefulCS
 {
     struct MaTen
     {
@@ -32,6 +34,21 @@
                 else b %= a;
             }
             return a+b;
+        }
+        internal static int EulerPhi(int n)
+        {
+            int result = n;
+            int sqrt = (int)Math.Sqrt(n);
+            for (int i = 2; i <= sqrt; ++i)
+                if (n % i == 0)
+                {
+                    while (n % i == 0)
+                        n /= i;
+                    result -= result / i;
+                }
+            if (n > 1)
+                result -= result / n;
+            return result;
         }
         //----------------------------------------------------------------------
     }//s

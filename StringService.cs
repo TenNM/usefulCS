@@ -37,6 +37,15 @@
             foreach (char c in s) { sRever = c + sRever; }
             return sRever;
         }
+        internal string ReplaceFirst(string text, string search, string replace)
+        {
+            int pos = text.IndexOf(search);
+            if (pos < 0)
+            {
+                return text;
+            }
+            return text.Substring(0, pos) + replace + text.Substring(pos + search.Length);
+        }
         //------------------------------------------------------------------------------end
     }
 }

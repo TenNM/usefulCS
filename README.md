@@ -7,7 +7,7 @@ Repo with some useful classes and structures for C#
 1. Checking, is the string a number. With minus and comma
 2. Dots to commas replace in string method
 3. Str reverse
-4. ReplaceFirst entry
+4. Replace first entry
 ##### Struct [MathExpressionValidator](https://github.com/TenNM/usefulCS/blob/master/MathExpressionValidator.cs)
 1. Validation of math expression on correctness. Parentheses, math signs, inputting of trash
 ##### Struct [MaTen](https://github.com/TenNM/usefulCS/blob/master/MaTen.cs)

@@ -14,6 +14,7 @@ namespace usefulCS
         }
         internal static bool IsPowOf2(int n)
         {
+            if (n < 1) return false;
             return 0 == (n & (--n));
         }
         internal static int Sum1toN(int n)

@@ -1,10 +1,5 @@
-﻿using sandboxCS;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using StringService;
 
 namespace usefulCS
 {
@@ -12,7 +7,15 @@ namespace usefulCS
     {      
         static void Main(string[] args)
         {
-            Console.WriteLine(MaTen.EulerPhi(7));
+            //Console.WriteLine(MaTen.IsPowOf2(0));
+            string s = "1,23";
+
+            Console.WriteLine(s);
+            Console.WriteLine(s.DotsToCommas());
+            Console.WriteLine(s.StringIsNumber());
+            Console.WriteLine(s.Reverse());
+            Console.WriteLine(s.ReplaceFirst("23", "45"));
+
             Console.ReadKey();
         }//m
     }//c

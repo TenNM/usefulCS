@@ -1,9 +1,16 @@
-﻿namespace sandboxCS
+﻿namespace StringService
 {
-    internal abstract class StringService
+    /// <summary>
+    /// Class with string extension methods.
+    /// </summary>
+    public static class StringService
     {
         //----------------------------------------------------------------------
-        internal static bool StringIsNumber(string s)
+
+        /// <summary>
+        /// Note: 1,23 is number, but 1.23 is not. Because double.Parse("1.23") throws exception.
+        /// </summary>
+        public static bool StringIsNumber(this string s)
         {
             bool weHaveOneComma = false;
             if (s[0].Equals(',')) { weHaveOneComma = true; }
@@ -21,7 +28,11 @@
 
             return true;
         }
-        internal static string DotsToCommas(string withCommasStr)
+
+        /// <summary>
+        /// Replace all dots in string.
+        /// </summary>
+        public static string DotsToCommas(this string withCommasStr)
         {
             string tempStr = "";
             foreach (char c in withCommasStr)
@@ -31,13 +42,21 @@
             }
             return tempStr;
         }
-        internal static string Reverse(string s)
+
+        /// <summary>
+        /// Reverse string.
+        /// </summary>
+        public static string Reverse(this string s)
         {
             string sRever = "";
             foreach (char c in s) { sRever = c + sRever; }
             return sRever;
         }
-        internal string ReplaceFirst(string text, string search, string replace)
+
+        /// <summary>
+        /// Replace only first entry.
+        /// </summary>
+        public static string ReplaceFirst(this string text, string search, string replace)
         {
             int pos = text.IndexOf(search);
             if (pos < 0)
@@ -46,6 +65,7 @@
             }
             return text.Substring(0, pos) + replace + text.Substring(pos + search.Length);
         }
+        
         //------------------------------------------------------------------------------end
     }
 }
